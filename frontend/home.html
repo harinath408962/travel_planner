@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Travel Planner - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="header">
+  <div class="title">Smart Travel Planner</div>
+</header>
+
+<main class="center-area wide">
+
+  <!-- LEFT SIDE -->
+  <div class="left-block">
+    <div class="card welcome-card">
+      <h2 class="card-title">Welcome</h2>
+      <p style="color:#333">Start planning — Add a new trip using the form.</p>
+    </div>
+
+    <div class="card summary-quick">
+      <h3 class="card-title">Quick Actions</h3>
+      <div style="display:flex; gap:8px; flex-wrap:wrap">
+        <button class="btn small-btn" id="goDashboard">Dashboard</button>
+        <button class="btn small-btn" id="goSaved">Saved Trips</button>
+        <button class="btn small-btn red" id="logoutBottom">Logout</button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT FORM -->
+  <aside class="card form-card">
+    <h2 class="card-title">Add New Trip</h2>
+
+    <form id="tripForm" class="form">
+      <input id="destination" type="text" placeholder="Destination" required />
+      <input id="startDate" type="date" required />
+      <input id="endDate" type="date" required />
+      <input id="budget" type="number" placeholder="Budget (₹)" min="0" required />
+      <textarea id="notes" placeholder="Events / Notes (optional)"></textarea>
+
+      <button type="submit" class="btn primary">Add Trip</button>
+    </form>
+  </aside>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+</html>
