@@ -1,1 +1,65 @@
 
+/* Base + reset */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Poppins', Arial, sans-serif; background: #f2f6fb; color: #222; }
+
+/* Header */
+.header { background: #004aad; padding: 8px 0; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.06); }
+.title { color: white; font-weight:700; }
+
+/* Layout */
+.center-area { display:flex; justify-content:center; align-items:flex-start; padding: 24px 12px; min-height: calc(100vh - 80px); }
+.center-area.wide { align-items:flex-start; }
+
+/* Cards and forms */
+.card { background: #fff; border-radius: 10px; padding: 14px; box-shadow: 0 6px 18px rgba(15,30,60,0.04); margin-bottom:12px; }
+.small-card { width: 360px; }
+.form-card { width: 380px; }
+
+/* Welcome & left block */
+.left-block { width: 58%; max-width:720px; margin-right: 12px; }
+.welcome-card { margin-bottom:12px; }
+.summary-quick { padding: 12px; }
+
+/* Forms */
+.form { display:flex; flex-direction: column; gap:10px; }
+input, textarea, select { padding:8px 10px; border-radius:6px; border:1px solid #dfe6f0; background:#fbfeff; font-size:0.95rem; }
+textarea { min-height:80px; resize: vertical; }
+
+/* Buttons */
+.btn { padding:8px 12px; border-radius:6px; border:0; cursor:pointer; font-weight:600; }
+.btn.primary { background:#0078ff; color:white; }
+.btn.small-btn { padding:6px 10px; font-size:0.9rem; }
+.btn.red { background:#d9534f; color:#fff; }
+.btn.small-btn.red { padding:6px 10px; }
+
+/* Trip grid */
+.trip-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-top:8px; }
+
+/* Trip card */
+.trip-card { background:#eaf4ff; padding:14px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.04); }
+.trip-card h4 { margin:0 0 8px 0; color:#003d8a; font-size:1rem; }
+
+/* Dashboard cards */
+.cards-row { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px; }
+.stat-card { flex:1 1 220px; background:#fff; border-radius:10px; padding:14px; box-shadow:0 6px 18px rgba(15,30,60,0.04); text-align:center; }
+.stat-title { color:#666; font-size:0.9rem; margin-bottom:6px; }
+.stat-value { font-size:1.4rem; font-weight:700; color:#003d8a; }
+
+/* Charts row */
+.chart-row { display:flex; gap:14px; margin-top:8px; flex-wrap:wrap; }
+.chart-card { flex:1 1 360px; background:#fff; padding:12px; height: 320px; border-radius:10px; box-shadow:0 6px 18px rgba(15,30,60,0.04); }
+.chart-card canvas {
+  width: 100% !important;
+  height: 260px !important;
+  max-height: 260px !important;
+}
+
+
+/* Responsive */
+@media (max-width: 980px) {
+  .left-block { width:100%; margin-right:0; }
+  .form-card { width:90%; margin-top:12px; }
+  .cards-row { flex-direction:column; }
+  .chart-row { flex-direction:column; }
+}
