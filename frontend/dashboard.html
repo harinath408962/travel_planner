@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Travel Planner - Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="title">Dashboard</div>
+</header>
+
+<main class="center-area wide">
+
+  <div style="width:100%; max-width:1200px; margin:0 auto;">
+
+    <!-- TOP STAT CARDS -->
+    <div class="cards-row">
+
+      <div class="stat-card">
+        <div class="stat-title">Total Trips</div>
+        <div class="stat-value" id="statTotalTrips">0</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-title">Total Budget</div>
+        <div class="stat-value" id="statTotalBudget">₹0</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-title">Upcoming Trip</div>
+        <div class="stat-value" id="statUpcoming">None</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-title">Highest Budget</div>
+        <div class="stat-value" id="statHighest">₹0</div>
+      </div>
+
+    </div>
+
+    <!-- CHARTS -->
+    <div class="chart-row">
+
+      <div class="chart-card">
+        <h4>Trips per Month (This Year)</h4>
+        <canvas id="chartTripsMonth"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h4>Budget Breakdown (By Trip)</h4>
+        <canvas id="chartBudgetBreakdown"></canvas>
+      </div>
+
+    </div>
+
+    <div style="text-align:right; margin-top:12px;">
+      <button id="homeFromDash" class="btn small-btn red">Home</button>
+    </div>
+
+  </div>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
